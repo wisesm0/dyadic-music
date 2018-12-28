@@ -1,0 +1,132 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: contrast(120%);
+  background-color: black;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1600px at 90% 100%, rgba(40, 39, 100, 1) 10%, #020409 100%);
+}
+
+.content {
+  width: inherit;
+  height: inherit;
+}
+
+#universe {
+  width: 100%;
+  height: 100%;
+}
+
+#footerContent {
+  font-family: Cutive Mono,Bungee Hairline,Verdana;
+  font-size: 10px;
+  color: rgba(200, 220, 255, .3);
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  right:0px;
+  height: 300px;
+}
+
+#scene {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -800px;
+}
+
+a {
+  text-decoration: none;
+  opacity: .4;
+  transition: opacity .4s ease;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.container2 {
+  text-align:center;
+  /* perfect centering */
+  left:30%;
+  top:30%;
+  transform:translate(-50%,-50%);
+  position: absolute;
+  width:100%;
+  max-width:350px;
+}
+ul {
+  font-family: Cutive Mono,Bungee Hairline,Verdana;
+  list-style: none;
+  padding: 0;
+  background:rgba(20, 39, 100, 1);
+  max-height: 0;
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  visibility: hidden;
+  border-radius:3px;
+  opacity:0;
+  transform:rotate(180deg);
+}
+
+li a {
+  padding:12px 0;
+  display: block;
+  transition:.25s
+}
+li a:hover {
+  background: #6fabbc;
+}
+
+a {
+  color:#fff;
+  text-transform:uppercase;
+  text-decoration: none;
+}
+i {
+  padding:20px;
+  background: rgba(0,0,0,.15);
+  border-radius:50px;
+  color:#fff;
+  transition:.25s;
+  animation: 1.25s bounce infinite;
+}
+i:hover {
+  cursor:pointer;
+  background: rgba(255,255,255,.95);
+  animation-play-state: paused;
+}
+ul.open {
+  max-height: 480px;
+  visibility: visible;
+  opacity:1;
+  transform:rotate(0);
+}
+/* animation */
+@keyframes bounce {
+  0% {margin-top:0;}
+  50% {margin-top:-15px; margin-bottom:15px;}
+  100% {margin-top:0;}
+}
+
