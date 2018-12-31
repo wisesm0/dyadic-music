@@ -4,60 +4,50 @@
     <head profile="http://www.w3.org/2005/10/profile">
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    	<link rel="shortcut icon" type="image/x-icon" href="img/logo3999.png" />
-
-    	<title>Dyadic Music</title>
-
-    	<style type="text/css">
-    		body {
-    		  background: rgb(0,0,0);
-    		}
-
-    		#center {
-    			background:rgba(20,20,20,.7);
-    			width:60%;
-    			padding:1em;
-    			margin:1em auto;
-    		}
-
-            #center-vert {
-                z-index:1; 
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            img {
-                max-width: 100%; 
-                height: auto;
-                display: inline-block;
-                margin:0;
-                vertical-align:top;
-            }
-
-    	</style>
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo3999.png" />
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css">
+        <link rel="stylesheet" type="text/css" href="main-container.css">
+    	<title>Dyadic Music - WIP</title>
     </head>
 
     <body>
-        <div id="center-vert" >
-            <div align="center" id="center"> 
-                <img src="img/bg3.gif">
+        <div class="center-vert" align="center">
+            <span style="margin: auto; display: inline-block;line-height: 0;">
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button shrink" id="play-previous">
+                        <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button shrink" id="play-pause-button">
+                        <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button shrink" id="play-next">
+                        <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <div align="center" class="frame"> 
+                <div id="frameContainer" class="resp-container">
+                    <iframe id="ifr" class="resp-iframe" src="doors/open-door.html" allowfullscreen></iframe>
+                </div>
             </div>
-
-            <div align="center">
-                <table cellspacing="0" cellpadding="0" align="center" class="footerwrap">
-                  <tbody>
-                    <tr>
-                        <td>
-                            <span style="margin: auto; display: inline-block;line-height: 0;">
-                                <a href="https://www.facebook.com/DyadicOfficial" target="_blank"><img src="img/facebook.png"></a><a href="https://twitter.com/dyadicmusic" target="_blank"><img src="img/twitter.png"></a><a href="https://www.youtube.com/user/DyadicOfficial" target="_blank"><img src="img/youtube.png"></a><a href="http://soundcloud.com/dyadic" target="_blank"><img src="img/soundcloud.png"></a>
-                            </span>
-                            <br>
-                        </td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
+            <span style="margin: auto; display: inline-block;line-height: 0;">
+                <a href="https://www.facebook.com/DyadicOfficial" target="_blank">
+                    <img class="shrink" src="img/facebook.png"></a>
+                <a href="https://twitter.com/dyadicmusic" target="_blank">
+                    <img class="shrink" src="img/twitter.png"></a>
+                <a href="https://www.youtube.com/user/DyadicOfficial" target="_blank">
+                    <img class="shrink" src="img/youtube.png"></a>
+                <a href="http://soundcloud.com/dyadic" target="_blank">
+                    <img class="shrink" src="img/soundcloud.png"></a>
+            </span>
         </div>
     </body>
+    <script src='controls.js' type='text/javascript'></script>
 </html>
