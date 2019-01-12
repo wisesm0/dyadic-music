@@ -1,0 +1,90 @@
+html, .door{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+body{
+    font-size: 10pt;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.door{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.door .left,
+.door .right{
+    font-size: 10pt;
+    display: inline-block;
+    width: calc(50% - 2.5px);
+    height: 100%;
+    background: #0e0e0e;
+}
+
+.door .left{
+    float: left;
+    border-right: solid 2.5px #111;
+}
+
+.door .right{
+    float: right;
+    border-left: solid 2.5px #111;
+}
+
+.enter{
+    cursor: pointer;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+    position: absolute;
+    padding: 5px 10px;
+    margin: auto;
+    color: #ccc;
+}
+
+.enter:hover{
+    color: orange;
+}
+
+img {
+    max-width: 100%; 
+}
+
+.resp-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.fade
+{
+    opacity:1;
+}
+.fade:hover
+{
+    opacity:.8;
+}
