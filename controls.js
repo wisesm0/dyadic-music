@@ -29,15 +29,20 @@ function playPause()
 {
     setTimeout(function()
     {
-        iframage.contentWindow.postMessage('message', '*');
         if(paused)
         {
+            iframage.contentWindow.postMessage({
+                type: 'unlock'
+            }, '*');
             console.log('starting song...');
             i.setAttribute("class","fas fa-pause");
             paused = false;
         }
         else
         {
+            iframage.contentWindow.postMessage({
+                type: 'close'
+            }, '*');
             console.log('stopping song...');
             i.setAttribute("class","fas fa-play");
             paused = true;
@@ -48,17 +53,34 @@ function playPause()
 let idx = 0;
 
 function playNext() {
-    idx++;
-    if (idx > scenes.length-1) {
-        idx = 0;
-    }
-    iframage.src = scenes[idx];
+    iframage.contentWindow.postMessage({
+        type: 'close'
+    }, '*');
+    setTimeout(() => {
+        iframage.contentWindow.postMessage({
+            type: 'unlock'
+        }, '*');
+    }, 1500);
+
+    // idx++;
+    // if (idx > scenes.length-1) {
+    //     idx = 0;
+    // }
+    // iframage.src = scenes[idx];
 }
 
 function playPrevious() {
-    idx--;
-    if (idx < 0) {
-        idx = scenes.length-1;
-    }
-    iframage.src = scenes[idx];
+    iframage.contentWindow.postMessage({
+        type: 'close'
+    }, '*');
+    setTimeout(() => {
+        iframage.contentWindow.postMessage({
+            type: 'unlock'
+        }, '*');
+    }, 1500);
+    // idx--;
+    // if (idx < 0) {
+    //     idx = scenes.length-1;
+    // }
+    // iframage.src = scenes[idx];
 }
