@@ -9,11 +9,9 @@ let dataset = {
 };
 
 window.addEventListener('message', function() {
-
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
     }
-
     if (dataset.playing === 'false') {
         audioElement.play();
         dataset.playing = 'true';

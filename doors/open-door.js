@@ -46,7 +46,7 @@ function open(leftdoor, rightdoor, button) {
 }
     
 function unlock(el){
-    iframage.contentWindow.postMessage('message', '*');
+    // iframage.contentWindow.postMessage('message', '*');
     if(el) {
         logoTween = TweenLite.to(el, .3, {scaleX:0, scaleY:0, 
             onComplete: function() {

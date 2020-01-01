@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css">
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css">
         <link rel="stylesheet" type="text/css" href="main-container.css">
+        <link rel="stylesheet" type="text/css" href="doors/open-door.css">
     	<title>Dyadic Music - WIP</title>
     </head>
 
@@ -34,7 +35,14 @@
             </span>
             <div align="center" class="frame"> 
                 <div id="frameContainer" class="resp-container">
-                    <iframe id="ifr" class="resp-iframe" src="doors/open-door.html" allowfullscreen></iframe>
+                    <div class='enter fade'>
+                        <img src="../img/transparentsmall.png">
+                    </div>
+                    <div class='door'>
+                        <div class='left'></div>
+                        <div class='right'></div>
+                    </div>
+                    <iframe id="ifr" class="resp-iframe" src="../scenes/left-behind/index.html" allowfullscreen></iframe>
                 </div>
             </div>
             <span style="margin: auto; display: inline-block;line-height: 0;">
@@ -50,4 +58,5 @@
         </div>
     </body>
     <script src='controls.js' type='text/javascript' type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 </html>
