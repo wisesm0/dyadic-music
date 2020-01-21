@@ -22,19 +22,28 @@ let tween2;
 let tween3;
 let logoTween;
 
+function debounce(fn, delay) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = (new Date).getTime();
+      if (now - lastCall < delay) {
+        return;
+      }
+      lastCall = now;
+      return fn(...args);
+    }
+  }
+  
+
 playbutton.addEventListener('click', function() {
     playPause();
 });
 
-playnext.addEventListener('click', () => {
-    playNext();
-});
+playnext.addEventListener('click', debounce(playNext, 1500));
 
-playprevious.addEventListener('click', () => {
-    playPrevious();
-});
+playprevious.addEventListener('click', debounce(playPrevious, 1500));
 
-enterButton[0].addEventListener("click", function() {
+enterButton[0].addEventListener("click", () => {
     unlock(enterButton[0]);
 });
 
