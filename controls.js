@@ -13,7 +13,7 @@ const right = document.getElementsByClassName("right");
 
 const scenes = [
     '../scenes/left-behind/index.html',
-    '../scenes/urban-decay/index.html',
+    // '../scenes/urban-decay/index.html',
     '../scenes/big-bang/index.html'
 ];
 
@@ -39,9 +39,9 @@ playbutton.addEventListener('click', function() {
     playPause();
 });
 
-playnext.addEventListener('click', debounce(playNext, 1500));
+playnext.addEventListener('click', debounce(playNext, 1600));
 
-playprevious.addEventListener('click', debounce(playPrevious, 1500));
+playprevious.addEventListener('click', debounce(playPrevious, 1600));
 
 enterButton[0].addEventListener("click", () => {
     unlock(enterButton[0]);

@@ -18,7 +18,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(1600px at 90% 100%, rgb(6, 84, 72) 10%, #020409 100%);
+  background-image: radial-gradient(1600px at 90% 100%, rgb(19, 16, 16) 20%, rgb(3, 63, 15) 100%);
 }
 
 .content {
